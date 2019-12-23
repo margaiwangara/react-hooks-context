@@ -3,6 +3,15 @@ import { AppContext } from "../appContext";
 
 export default function Data() {
   const scrapeData = useContext(AppContext);
-  console.log(scrapeData);
-  return <p>Data</p>;
+  const data = scrapeData
+    ? scrapeData.data.map(v => (
+        <ul key={v._id}>
+          <li>{v.title}</li>
+          <li>{v.summary}</li>
+          <li>{v.datePublished}</li>
+        </ul>
+      ))
+    : null;
+
+  return <div>{data}</div>;
 }
