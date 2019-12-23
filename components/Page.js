@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { AppProvider } from "../appContext";
 
-export default function Page({ children }) {
-  const [articles, storeArticles] = useState(null);
+function useArticles() {
+  const [articles, setArticles] = useState(null);
 
   useEffect(() => {
     async function fetchArticles() {
@@ -11,7 +11,7 @@ export default function Page({ children }) {
           "https://devnewsbucket.margaiwangara.me/api/articles"
         );
         const articles = await data.json();
-        return storeArticles(articles);
+        return setArticles(articles);
       } catch (error) {
         console.log(error);
       }
@@ -19,6 +19,11 @@ export default function Page({ children }) {
     fetchArticles();
   }, []);
 
+  return articles;
+}
+
+export default function Page({ children }) {
+  const articles = useArticles();
   return (
     <AppProvider value={articles}>
       <div className="page">{children}</div>
