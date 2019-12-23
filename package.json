@@ -1,0 +1,18 @@
+{
+  "name": "react-2019",
+  "version": "1.0.0",
+  "description": "Brushing up on my react skills and learning of new 2019 updates",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next"
+  },
+  "author": "Margai Wangara",
+  "license": "MIT",
+  "dependencies": {
+    "next": "^9.1.6",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  }
+}
