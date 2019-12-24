@@ -18,6 +18,11 @@ export default function Header() {
           <a>contact</a>
         </Link>
       </li>
+      <li>
+        <Link href="/data">
+          <a>data</a>
+        </Link>
+      </li>
     </ul>
   );
 }

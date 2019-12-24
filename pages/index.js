@@ -5,12 +5,12 @@ import Link from "next/link";
 // components
 import Page from "../components/Page";
 import Header from "../components/Header";
+import Data from "../components/Data";
 
 export default function App({ children }) {
   return (
     <Page>
-      <Header />
-      <p>Routing in Next.js</p>
+      <Data />
     </Page>
   );
 }

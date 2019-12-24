@@ -3,8 +3,9 @@ import { AppContext } from "../appContext";
 
 export default function Data() {
   const scrapeData = useContext(AppContext);
-  const data = scrapeData
-    ? scrapeData.data.map(v => (
+  const { articles, setLimit } = scrapeData;
+  const data = articles
+    ? articles.data.map(v => (
         <ul key={v._id}>
           <li>{v.title}</li>
           <li>{v.summary}</li>
@@ -13,5 +14,11 @@ export default function Data() {
       ))
     : null;
 
-  return <div>{data}</div>;
+  return (
+    <div>
+      <button onClick={setLimit}>View More</button>
+      <br />
+      {data}
+    </div>
+  );
 }
