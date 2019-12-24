@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { AppProvider } from "../appContext";
-import Data from "./Data";
 
 function useArticles(limit) {
   const [articles, setArticles] = useState({ data: [] });

@@ -1,26 +1,22 @@
 import React from "react";
 import Link from "next/link";
 
-import Home from "../components/Home";
-import Contact from "../components/Contact";
-
 export default function Header() {
   return (
     <ul>
       <li>
         <Link href="/">
-          <a>home</a>
+          <a>Home</a>
         </Link>
       </li>
-
+      <li>
+        <Link href="/about">
+          <a>About</a>
+        </Link>
+      </li>
       <li>
         <Link href="/contact">
-          <a>contact</a>
-        </Link>
-      </li>
-      <li>
-        <Link href="/data">
-          <a>data</a>
+          <a>Contact</a>
         </Link>
       </li>
     </ul>

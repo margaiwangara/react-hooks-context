@@ -1,5 +1,11 @@
 import React from "react";
+import Header from "../components/Header";
 
 export default function Contact() {
-  return <p>Contact Us Now</p>;
+  return (
+    <>
+      <Header />
+      <p>This is the contact route</p>
+    </>
+  );
 }
